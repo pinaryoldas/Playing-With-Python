@@ -27,22 +27,25 @@ def mmultiply(a,b):
 
     return [out[0][0],out[1][0]]
 
+def main():
+    print("Enter two complex numbers: a+ib, c+id")
+    a0 = input("a = ")
+    b0 = input("b = ")
+    c0 = input("c = ")
+    d0 = input("d = ")
 
-print("Enter two complex numbers: a+ib, c+id")
-a0 = input("a = ")
-b0 = input("b = ")
-c0 = input("c = ")
-d0 = input("d = ")
+    a = [float(a0),float(b0)]
+    b = [float(c0),float(d0)]
 
-a = [float(a0),float(b0)]
-b = [float(c0),float(d0)]
+    product = cmultiply(a,b)
 
-product = cmultiply(a,b)
+    print("Standard: ({}+{}i)*({}+{}i) = {}+{}i".format(
+        a0,b0,c0,d0,product[0],product[1]))
 
-print("Standard: ({}+{}i)*({}+{}i) = {}+{}i".format(
-    a0,b0,c0,d0,product[0],product[1]))
+    product = mmultiply(a,b)
 
-product = mmultiply(a,b)
+    print("Matrix: ({}+{}i)*({}+{}i) = {}+{}i".format(
+        a0,b0,c0,d0,product[0],product[1]))
 
-print("Matrix: ({}+{}i)*({}+{}i) = {}+{}i".format(
-    a0,b0,c0,d0,product[0],product[1]))
+if __name__ = "main":
+    main()
