@@ -47,5 +47,5 @@ def main():
     print("Matrix: ({}+{}i)*({}+{}i) = {}+{}i".format(
         a0,b0,c0,d0,product[0],product[1]))
 
-if __name__ = "main":
+if __name__ == "main":
     main()
